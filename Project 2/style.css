@@ -1,0 +1,99 @@
+body {
+background-color: rgb(231, 172, 117);
+font-family: Impact, sans-serif;
+}
+
+h1 {
+    margin: auto;
+    margin-top: 5%;
+    max-width: max-content;
+    display: flex;
+    padding: 10px 20px;
+    background-color: #ff9500;
+    color: rgb(132, 76, 7);
+    text-decoration: none;
+    border-radius: 12px;
+    border-width: 5px;
+    border-color: white;
+    box-shadow: 0 0 0 3px black, 0 0 0 6px white;
+}
+
+#todo-form {
+    max-width: max-content;
+    margin:auto;
+    margin-top: 3%;
+    display:flex;
+}
+
+li {
+    margin:auto;
+    max-width: 25%;
+    margin-top: 3%;
+}
+
+ul {
+   transition: ease-in;
+   list-style-type: none;
+}
+
+ul :hover {
+    font-size: large;
+    color: black;
+    transition-duration: 1s; 
+}
+
+button {
+    background-color: #ff9500;
+    color: rgb(132, 76, 7);
+    text-decoration: none;
+    border-radius: 12px;
+    border-width: 5px;
+    border-color: white;
+    box-shadow: 0 0 0 3px black, 0 0 0 6px white;
+}
+
+.done {
+    margin: 5px;
+    margin-top: 10px;
+    position:relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: ease-in;
+}
+
+.remove {
+    margin: 5px;
+    margin-top: 10px;
+    transition: ease-in;
+}
+
+.done:hover{
+background-color: greenyellow;
+transition-duration: 0.2s;
+}
+
+.remove:hover {
+    background-color: red;
+    transition-duration: 0.2s;
+}
+#priority {
+    padding: 1%;
+    margin-left: 3%;
+}
+
+#add-task {
+    margin-left: 3%;
+}
+
+#task {
+    padding-inline: 10%;
+}
+
+.task-priority {
+    color:rgb(132, 76, 7);;
+}
+
+.task-name.completed {
+    color: gray;
+    text-decoration: line-through;
+  }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Project 2/style.css">
+    <script src="TodoList.js"></script>
+</head>
+
+<body> 
+    <div>
+        <h1>To-Do List</h1>
+    </div>
+<form id = "todo-form">
+    <input type="text" id="task">
+    <select id = "priority">
+        <option value = "High">High</option>
+        <option value = "Medium">Medium</option>
+        <option value = "Low">Low</option>
+    </select>
+    <button id="add-task">+</button> 
+</form>
+<div class="todo">
+    <ul id = list></ul>
+</div>
+</body>
+</html>
