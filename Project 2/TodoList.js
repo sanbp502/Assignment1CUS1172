@@ -20,7 +20,7 @@ function renderTasks() {
         const task_status = task.status || "pending"; //create task status constant. Defaults to pending
         li.innerHTML = `
             <span class="task-priority">${task.priority}</span>
-            <span class="task-name task-name-${index} ${task_status}">${task.task}</span> //add status to task in class name
+            <span class="task-name task-name-${index} ${task_status}">${task.task}</span>
             <div class="buttons">
             <button class="done" data-index="${index}">Done</button>
             <button class="remove" data-index="${index}">Remove</button>
