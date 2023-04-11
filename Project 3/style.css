@@ -1,0 +1,55 @@
+body {
+    background-color: rgb(231, 172, 117);
+    font-family: Impact, sans-serif;
+    margin-top:10%;
+    }
+    
+    h1 {
+        margin: auto;
+        margin-top: 5%;
+        max-width: max-content;
+        display: flex;
+        padding: 10px 20px;
+        background-color: #ff9500;
+        color: rgb(132, 76, 7);
+        text-decoration: none;
+        border-radius: 12px;
+        border-width: 5px;
+        border-color: white;
+        box-shadow: 0 0 0 3px black, 0 0 0 6px white;
+    }
+    
+   form {
+        max-width: max-content;
+        margin:auto;
+        margin-top: 3%;
+        display:flex;
+    }
+    
+    button {
+        background-color: #ff9500;
+        color: rgb(132, 76, 7);
+        text-decoration: none;
+        border-radius: 12px;
+        border-width: 5px;
+        border-color: white;
+        box-shadow: 0 0 0 3px black, 0 0 0 6px white;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .button__menu {
+        max-width: max-content;
+        margin:auto;
+        margin-top: 3%;
+        display:flex;
+
+    }
+
+    .row {
+        margin: 10px;
+    }
+
+    img {
+        size:250px;
+    }
