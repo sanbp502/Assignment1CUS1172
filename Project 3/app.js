@@ -143,18 +143,14 @@ const renderPage = function () {
   let src;
   let model;
 
-  // Check if there are any questions left
   if (qArray.length > 0) {
-    // Access quiz model
+
     src = document.querySelector('#quiz_view').innerHTML;
 
-    // Initialize/reset the 'quizQuestions' json
     quizQuestions.currentQuestion += 1;
   } else {
     // Display result model
     src = document.querySelector('#result_view').innerHTML;
-
-    // Show percentage score
     let percentage = (quizQuestions.correctResponses / quizQuestions.totalQuestions) * 100;
     quizQuestions.percentage = percentage;
   }
@@ -163,11 +159,9 @@ const renderPage = function () {
   let html = model(quizQuestions);
   document.querySelector('#widget_view').innerHTML = html;
 
-  // If there are still questions
   if (qArray.length > 0) {
-    // Next question
     view_question();
-    // Check if the question type has no more questions
+
     let isEmpty = true;
     for (let i = 0; i < qArray.length; i++) {
       if (Object.values(qArray[i])[0].length > 0) {
@@ -175,7 +169,6 @@ const renderPage = function () {
         break;
       }
     }
-    // If the question type has no more questions, remove it
     if (isEmpty) {
       qArray.shift();
     }
@@ -183,23 +176,20 @@ const renderPage = function () {
 }
 
 
-// checkAnswer mehotd
+// checkAnswer 
 function checkAnswer(number) {
 
-  //declare letiable that willl be associated ot the correct answer of the questions
   let correctAnswer;
-
-  //If the response is incorrect, then add a new property to the qChoice object
   if (qChoice['Answer'] != number) {
     if ('Choices' in qChoice) {
       correctAnswer = qChoice['Choices'];
       correctAnswer = correctAnswer[qChoice['Answer']];
       correctAnswer = correctAnswer['Answer'];
     }
-    else if (qChoice['Answer'] == 0) { //When the answer is 'true'
+    else if (qChoice['Answer'] == 0) {
       correctAnswer = 'True';
     }
-    else if (qChoice['Answer'] == 1) { //When the answer is 'false'
+    else if (qChoice['Answer'] == 1) {
       correctAnswer = 'False';
     }
     qChoice.CorrectAnswer = correctAnswer;
@@ -212,8 +202,6 @@ function checkAnswer(number) {
   let src = document.querySelector('#feedback').innerHTML;
   let model = Handlebars.compile(src);
   let html = model(qChoice);
-
-  // Change model and its css
   document.querySelector(".Background").style.width = "100%";
   document.querySelector("#response").innerHTML = html;
 }
