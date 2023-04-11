@@ -51,5 +51,9 @@ body {
     }
 
     img {
-        size:250px;
+        padding:10px;
+        margin:0px;
+        border-radius:50%;
+        width: 100px;
+        height: 100px;
     }
